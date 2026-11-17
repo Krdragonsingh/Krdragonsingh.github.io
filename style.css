@@ -65,4 +65,13 @@ body {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
-
+#musicBtn {
+    margin-top: 12px;
+    padding: 7px 14px;
+    font-size: 12px;
+    border-radius: 20px;
+    border: 1px solid #fff;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+}
