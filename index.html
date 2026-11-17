@@ -43,6 +43,11 @@
 
   <div class="text-center z-10 p-4" data-aos="fade-in" data-aos-duration="1500">
     <h1 class="text-5xl md:text-7xl font-anime drop-shadow-lg">Happy Birthday Noor! <p>🥳🥳🎂🎂🎈🎉</p></h1>
+
+      <button id="musicBtn" onclick="toggleMusic()">
+        🎵 Play Music
+    </button>
+
     <p class="mt-4 text-xl font-semibold">Celebrating a wonderful journey of </p>
     <div id="countdown" class="mt-6 text-2xl font-semibold tracking-widest leading-relaxed"></div>
   </div>
@@ -251,5 +256,23 @@
 
 <!-- Link to your new external JavaScript file -->
 <script src="script.js"></script>
+    <audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function toggleMusic() {
+    const music = document.getElementById("bgMusic");
+    const btn = document.getElementById("musicBtn");
+
+    if (music.paused) {
+        music.play();
+        btn.innerHTML = "⏸ Pause Music";
+    } else {
+        music.pause();
+        btn.innerHTML = "🎵 Play Music";
+    }
+}
+</script>
 </body>
 </html>
